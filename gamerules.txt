@@ -1,0 +1,6 @@
+-------------------------------GUESSING NUMBER-----------------------------------
+
+1.computer will generate a random number using a rand() function.
+2.You have to guess the number.
+3.computer will give you hints that your guess is high or low.
+4.the number always in between the 1 to 999.
