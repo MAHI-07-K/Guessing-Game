@@ -18,7 +18,7 @@ void info()
 void savedata(string name,int hits,int num)
 {
     ofstream winnerdata;
-    winnerdata.open("gamedata",ios::app);
+    winnerdata.open("gamedata.txt",ios::app);
     winnerdata<<name<<" had the guessed the number "<<num<<" with "<<hits<<" hits\n";
 }
 int main()
@@ -26,7 +26,7 @@ int main()
     using namespace std::chrono;
     info();
     srand(time(NULL));
-    int num=(rand()%1000);
+    int num=(rand()%1000)+1;
     cout<<"Enter your name"<<endl;
     string name;cin>>name;
     auto start=high_resolution_clock::now();
@@ -44,4 +44,5 @@ int main()
     auto finish=high_resolution_clock::now();
     cout<<"Congrates you Won with hits:-"<<hits<<"with time"<<finish-start<<endl;
     savedata(name,hits,num);
+
 }
